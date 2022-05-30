@@ -7,6 +7,9 @@ body {
     color: white;
 }
 
+div, span, input{
+    font-size: 2rem;
+}
 input {
     font-family: monospace;
     background-color: darkslategrey;
