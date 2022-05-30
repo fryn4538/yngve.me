@@ -1,35 +1,30 @@
 body {
-        font-family: monospace;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-}
-.header {
-    background-color: blue;
-    height: 100vh;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    color: white;
 }
 
-.header .wrapper {
-    padding: 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100vh;
+input {
+    font-family: monospace;
+    background-color: darkslategrey;
+    color: white;
+    outline: none;
+    border: none;
 }
-.header .wrapper .col-right {
+
+#txtWrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-}
-.header .wrapper .col-left {
-    display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
-.header .wrapper .col-left img {
-    height: 80%;
+
+.highlight {
+    color: cyan;
 }
-.container {
-    display: flex;
-    height: 100vh;
+
+.warning {
+    color: red;
 }

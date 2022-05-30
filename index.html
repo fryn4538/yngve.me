@@ -6,18 +6,16 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <div class="header">
-            <div class="wrapper">
-                <div class="col-left">
-                    <img src="img/profilpicture.png"/>
-                </div> 
-                <div class="col-right">
-                    <h1>Hello, I'm Fredrik Yngve.</h1>
-                    <h2>I'm a developer</h2>
-                    <h3>Studying Information Technology at Uppsala University and working as a developer at Säljpoolen AB</h3>
-                    <p>Any questions? Contact me at fredrik@yngve.me(<a href="fredrik@yngve.me.asc" download>GPG key</a>) or visit my <a href="https://www.linkedin.com/in/fredrik-yngve/">LinkedIn</a></p>
-                </div> 
-            </div>  
+        <div id="history">
+            Welcome to yngve.me a site where you can get to know me(Fredrik Yngve)</br>
+            and what I have done so far in my career as a Software Engineer.</br>
+
+            Type <span class="highlight">'help'</span> to see available commands
         </div>
+        <div id="txtWrapper">
+            <span>guest@yngve.me ~&nbsp;</span>
+            <input id="txtArea" onkeypress="onEnter();" autofocus/>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
