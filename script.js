@@ -2,7 +2,7 @@ const help = "" +
     "<span class='highlight'>help</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- You already know what this does</br>" +
     "<span class='highlight'>whois</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Information about me</br>" + 
     "<span class='highlight'>projects</span>&nbsp;&nbsp;&nbsp;&nbsp;- View coding projects</br>" + 
-    "<span class='highlight'>social</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Websites where you can finde me</br>" + 
+    "<span class='highlight'>social</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Websites where you can find me</br>" + 
     "<span class='highlight'>history</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- View command history</br>" +
     "<span class='highlight'>contact</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- How you reach me</br>" + 
     "<span class='highlight'>clear</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear terminal</br>";
@@ -11,7 +11,7 @@ const help = "" +
 const whois = "Hello I'm Fredrik, the semmel slayer!";
 
 // TODO
-const projects = "Currently implementing this section. While wating, you can visit my <span class='highlight'><a href='https://github.com/fryn4538/'>Github</a></span>.";
+const projects = "Currently implementing this section. While waiting, you can visit my <span class='highlight'><a href='https://github.com/fryn4538/'>Github</a></span>.";
 
 const social = "" +
     "Github&nbsp;&nbsp;&nbsp;&nbsp; - <a href='https://github.com/fryn4538/'>https://github.com/fryn4538/</a></br>" +
