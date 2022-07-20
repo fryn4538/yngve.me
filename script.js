@@ -25,6 +25,28 @@ const wrong = (str) => {
 } 
 
 var historyList = [];
+var index = -1;
+
+window.onkeyup = function(e) {
+    var key = e.keyCode;
+    var inpt = document.getElementById("txtArea");
+    if (key == 38) {
+        if(index < historyList.length-1){
+            index++;
+            inpt.value = historyList[historyList.length-1-index];
+        }
+    } else if (key == 40) {
+        if (index > 0) {
+            index--;
+            inpt.value = historyList[historyList.length-1-index];
+        } else {
+            inpt.value = "";
+            index = -1;
+        }
+    }
+};
+
+
 
 function appendElement(str) {
     const node = document.createElement("div");
