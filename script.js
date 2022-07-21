@@ -79,6 +79,8 @@ function onEnter() {
         window.event.preventDefault();
         var input = document.getElementById("txtArea").value;
 
+        if (input == "exit") window.close();
+
         outputLine(input);
         if (input == "help") appendElement(help);
         else if (input == "whois") appendElement(whois);
@@ -89,6 +91,7 @@ function onEnter() {
         else if (input == "clear") clear();
         else appendElement(wrong(input));
         historyList.push(input);
+        index = -1;
         document.getElementById("txtArea").value = "";
         return false;
     }
