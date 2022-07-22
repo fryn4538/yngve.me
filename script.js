@@ -79,7 +79,9 @@ function onEnter() {
         window.event.preventDefault();
         var input = document.getElementById("txtArea").value;
 
-        if (input == "exit") window.close();
+        if (input == "exit"){
+            close();
+        }
 
         outputLine(input);
         if (input == "help") appendElement(help);
