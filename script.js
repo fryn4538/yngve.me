@@ -20,7 +20,7 @@ const help = "<div class='rows'>" +
 const whois = "Hello I'm Fredrik, the semmel slayer!";
 
 // TODO
-const projects = "Currently implementing this section. While wating, you can visit my <span class='highlight'><a href='https://github.com/fryn4538/'>Github</a></span>.";
+const projects = "Currently implementing this section. While waiting, you can visit my <span class='highlight'><a href='https://github.com/fryn4538/'>Github</a></span>.";
 
 const social = "<div class='rows links'>" +
     "<span>Github</span><a href='https://github.com/fryn4538/'>github.com/fryn4538</a>" +
