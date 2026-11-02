@@ -1,15 +1,35 @@
-body {
-    font-family: monospace;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: darkslategrey;
-    color: white;
+:root {
+    --font-size: clamp(1rem, 0.6rem + 1.8vw, 2rem);
+    --bar-height: 3.25rem;
 }
 
-div, span, input{
-    font-size: 2rem;
+* {
+    box-sizing: border-box;
 }
+
+html {
+    background-color: darkslategrey;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: monospace;
+    margin: 0;
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+    padding-bottom: 0.5rem;
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    background-color: darkslategrey;
+    color: white;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+div, span, input {
+    font-size: var(--font-size);
+}
+
 input {
     font-family: monospace;
     background-color: darkslategrey;
@@ -18,10 +38,67 @@ input {
     border: none;
 }
 
+a {
+    color: cyan;
+}
+
+a, .nowrap {
+    white-space: nowrap;
+}
+
+.prompt {
+    color: palegreen;
+}
+
+/* A blank line's worth of space between one command's output and the next */
+.echo {
+    margin-top: 0.75em;
+}
+
+.echo:first-child {
+    margin-top: 0;
+}
+
 #txtWrapper {
     display: flex;
     justify-content: left;
     align-items: center;
+    margin: 0.75em 0 0;
+}
+
+#prompt {
+    flex: none;
+    white-space: nowrap;
+}
+
+#txtArea {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Two-column lists whose wrapped text stays in the second column */
+.rows {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 2ch;
+    row-gap: 0.25em;
+    align-items: baseline;
+}
+
+/* A command that runs when clicked, styled as terminal text */
+.cmd {
+    padding: 0;
+    border: none;
+    background: none;
+    color: cyan;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
 .highlight {
@@ -30,4 +107,61 @@ input {
 
 .warning {
     color: red;
+}
+
+#shortcuts {
+    display: none;
+}
+
+/* Links don't fit beside their labels on a phone in portrait */
+@media (max-width: 30rem) {
+    .links {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0;
+    }
+
+    .links span:not(:first-child) {
+        margin-top: 0.5em;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    body {
+        /* Room for the bar, and for the keyboard it sits on */
+        padding-bottom: calc(var(--bar-height) + env(safe-area-inset-bottom) + var(--kb-offset, 0px) + 0.5rem);
+    }
+
+    #shortcuts {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        min-height: var(--bar-height);
+        padding: 0.25rem max(0.5rem, env(safe-area-inset-right)) calc(0.25rem + env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left));
+        overflow-x: auto;
+        background-color: darkslategrey;
+        border-top: 1px solid cyan;
+        transform: translateY(calc(-1 * var(--kb-offset, 0px)));
+        scrollbar-width: none;
+    }
+
+    #shortcuts::-webkit-scrollbar {
+        display: none;
+    }
+
+    #shortcuts button {
+        flex: none;
+        min-height: 2.75rem;
+        padding: 0 0.75rem;
+        border: 1px solid cyan;
+        border-radius: 0;
+        background: none;
+        color: cyan;
+        font-family: monospace;
+        font-size: 1rem;
+        touch-action: manipulation;
+    }
 }
